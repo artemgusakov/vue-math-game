@@ -2,12 +2,18 @@
   <v-container>
     <v-row class="text-center">
       <v-col style="border: 1px black solid">
-        I'm player life bar
+        <h2>{{ isMonster ? "Monster" : "Player" }} name</h2>
+      </v-col>
+    </v-row>
+
+    <v-row class="text-center">
+      <v-col style="border: 1px black solid">
+        I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> life bar
       </v-col>
     </v-row>
     <v-row class="text-center">
       <v-col style="border: 1px black solid">
-        I'm player model
+        I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
       </v-col>
     </v-row>
   </v-container>
@@ -18,6 +24,9 @@
 export default {
 
   name: 'Player',
+  props: {
+    isMonster: Boolean
+  },
 
   data: () => ({
     //
