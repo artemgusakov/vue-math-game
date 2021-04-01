@@ -9,12 +9,15 @@
     <v-row class="text-center">
       <v-col style="border: 1px black solid">
         I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> life bar
+        <p> left {{ hp }} health points </p>
       </v-col>
     </v-row>
     <v-row class="text-center">
-      <v-col style="border: 1px black solid">
-        I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
-      </v-col>
+      <v-img src="../../assets/battle-pose.gif">
+        <v-col style="border: 1px black solid">
+          I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
+        </v-col>
+      </v-img>
     </v-row>
   </v-container>
 </template>
@@ -24,8 +27,13 @@
 export default {
 
   name: 'Player',
+
   props: {
-    isMonster: Boolean
+    isMonster: Boolean,
+    hp: {
+      type: Number,
+      default: 100
+    }
   },
 
   data: () => ({
