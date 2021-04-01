@@ -4,7 +4,9 @@ class MathTaskHelper {
     tasks;
 
     constructor() {
-        this.tasks = tasks
+        this.tasks = tasks.map((val) => {
+            return new Task(val.text, val.answer)
+        })
     }
 
     getTask() {
@@ -12,10 +14,20 @@ class MathTaskHelper {
         return this.tasks[index];
     }
 
-    checkAnswer(taskId, answer) {
-        return this.tasks.find(value => value.id === taskId).answer === answer
-    }
-
 }
 
-export {MathTaskHelper}
+class Task {
+    text;
+    answer;
+
+    constructor(text, answer) {
+        this.text = text
+        this.answer = answer
+    }
+
+    checkAnswer(answer) {
+        return this.answer === answer
+    }
+}
+
+export {MathTaskHelper, Task}

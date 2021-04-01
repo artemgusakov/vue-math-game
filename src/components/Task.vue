@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="4" style="border: 1px black solid">
         <h1>{{ task.text }}</h1> <v-text-field v-model.number="answer" type="number"></v-text-field>
-        <v-btn depressed color="primary" v-on:click="checkAnswer(task, answer)">
+        <v-btn depressed color="primary" v-on:click="checkAnswer()">
           Проверить
         </v-btn>
         Result is {{ result }}
@@ -31,8 +31,8 @@ export default {
   },
 
   methods: {
-     checkAnswer: function (task, answer) {
-       this.result = this.math.checkAnswer(task.id, answer)
+     checkAnswer: function () {
+       this.result = this.task.checkAnswer(this.answer)
        this.task = this.math.getTask()
        this.answer = null
      }
