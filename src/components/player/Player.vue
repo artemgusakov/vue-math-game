@@ -13,13 +13,13 @@
       </v-col>
     </v-row>
     <v-row class="text-center">
-      <v-img v-if="isMonster" src="../../assets/battle-pose-mirror.gif">
+      <v-img v-if="isMonster" src="../../assets/monster-battle-pose.gif" width="250" height="450">
         <v-col style="border: 1px black solid">
           I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
         </v-col>
       </v-img>
 
-      <v-img v-if="!isMonster" src="../../assets/battle-pose.gif">
+      <v-img v-if="!isMonster" src="../../assets/battle-pose.gif" width="250" height="450" >
         <v-col style="border: 1px black solid">
           I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
         </v-col>

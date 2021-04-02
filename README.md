@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Animation from
+https://www.fightersgeneration.com/characters3/ryu-a.html
