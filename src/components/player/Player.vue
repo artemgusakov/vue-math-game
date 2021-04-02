@@ -13,11 +13,18 @@
       </v-col>
     </v-row>
     <v-row class="text-center">
-      <v-img src="../../assets/battle-pose.gif">
+      <v-img v-if="isMonster" src="../../assets/battle-pose-mirror.gif">
         <v-col style="border: 1px black solid">
           I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
         </v-col>
       </v-img>
+
+      <v-img v-if="!isMonster" src="../../assets/battle-pose.gif">
+        <v-col style="border: 1px black solid">
+          I'm <h2>{{ isMonster ? "monster" : "player" }}</h2> model
+        </v-col>
+      </v-img>
+
     </v-row>
   </v-container>
 </template>
@@ -37,7 +44,7 @@ export default {
   },
 
   data: () => ({
-    //
+
   }),
 }
 </script>
